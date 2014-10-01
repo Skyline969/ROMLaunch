@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+	<Emulator>
+		<Name>Gameboy Advance</Name>
+		<Executable>D:\Program Files (x86)\VisualBoyAdvance\VisualBoyAdvance-M.exe</Executable>
+		<ROMDirectory>D:\ROMs\GBA</ROMDirectory>
+		<ROMExtension>gba</ROMExtension>
+		<Arguments />
+	</Emulator>
+	<Emulator>
+		<Name>Nintendo 64</Name>
+		<Executable>D:\Program Files (x86)\Project64\Project64.exe</Executable>
+		<ROMDirectory>D:\ROMs\N64</ROMDirectory>
+		<ROMExtension>v64</ROMExtension>
+		<ROMExtension>z64</ROMExtension>
+		<Arguments />
+	</Emulator>
+	<Emulator>
+		<Name>PlayStation 2</Name>
+		<Executable>D:\Program Files (x86)\PCSX2\pcsx2-r4600.exe</Executable>
+		<ROMDirectory>D:\ROMs\PS2</ROMDirectory>
+		<ROMExtension>iso</ROMExtension>
+		<Arguments />
+	</Emulator>
+	<Emulator>
+		<Name>Wii Virtual Console</Name>
+		<Executable>D:\Program Files (x86)\Dolphin\Dolphin.exe</Executable>
+		<ROMDirectory>D:\ROMs\Wii\VC</ROMDirectory>
+		<ROMExtension>wad</ROMExtension>
+		<Arguments>/e</Arguments>
+	</Emulator>
+</Settings>

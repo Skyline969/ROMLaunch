@@ -1,0 +1,32 @@
+d:\documents\visual studio 2010\Projects\ROMLaunch\ROMLaunch\bin\Debug\ROMLaunch.exe
+d:\documents\visual studio 2010\Projects\ROMLaunch\ROMLaunch\bin\Debug\ROMLaunch.pdb
+d:\documents\visual studio 2010\Projects\ROMLaunch\ROMLaunch\obj\x86\Debug\ResolveAssemblyReference.cache
+d:\documents\visual studio 2010\Projects\ROMLaunch\ROMLaunch\obj\x86\Debug\ROMLaunch.Form1.resources
+d:\documents\visual studio 2010\Projects\ROMLaunch\ROMLaunch\obj\x86\Debug\ROMLaunch.Properties.Resources.resources
+d:\documents\visual studio 2010\Projects\ROMLaunch\ROMLaunch\obj\x86\Debug\GenerateResource.read.1.tlog
+d:\documents\visual studio 2010\Projects\ROMLaunch\ROMLaunch\obj\x86\Debug\GenerateResource.write.1.tlog
+d:\documents\visual studio 2010\Projects\ROMLaunch\ROMLaunch\obj\x86\Debug\ROMLaunch.exe
+d:\documents\visual studio 2010\Projects\ROMLaunch\ROMLaunch\obj\x86\Debug\ROMLaunch.pdb
+D:\Google Drive\C#\ROMLaunch\ROMLaunch\obj\x86\Debug\ROMLaunch.exe
+D:\Google Drive\C#\ROMLaunch\ROMLaunch\obj\x86\Debug\ROMLaunch.pdb
+D:\Google Drive\C#\ROMLaunch\ROMLaunch\bin\Debug\ROMLaunch.exe
+D:\Google Drive\C#\ROMLaunch\ROMLaunch\bin\Debug\ROMLaunch.pdb
+D:\Google Drive\C#\ROMLaunch\ROMLaunch\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Google Drive\C#\ROMLaunch\ROMLaunch\obj\x86\Debug\ROMLaunch.Form1.resources
+D:\Google Drive\C#\ROMLaunch\ROMLaunch\obj\x86\Debug\ROMLaunch.Properties.Resources.resources
+D:\Google Drive\C#\ROMLaunch\ROMLaunch\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Google Drive\C#\ROMLaunch\ROMLaunch\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Google Drive\C#\ROMLaunch\src\ROMLaunch\obj\x86\Debug\ROMLaunch.exe
+D:\Google Drive\C#\ROMLaunch\src\ROMLaunch\obj\x86\Debug\ROMLaunch.pdb
+D:\Google Drive\C#\ROMLaunch\src\ROMLaunch\bin\Debug\ROMLaunch.exe
+D:\Google Drive\C#\ROMLaunch\src\ROMLaunch\bin\Debug\ROMLaunch.pdb
+D:\Google Drive\C#\ROMLaunch\src\ROMLaunch\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Google Drive\C#\ROMLaunch\src\ROMLaunch\obj\x86\Debug\ROMLaunch.Properties.Resources.resources
+D:\Google Drive\C#\ROMLaunch\src\ROMLaunch\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Google Drive\C#\ROMLaunch\src\ROMLaunch\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Google Drive\C#\ROMLaunch\src\ROMLaunch\obj\x86\Debug\ROMLaunch.MainForm.resources
+D:\Google Drive\C#\ROMLaunch\src\ROMLaunch\bin\Debug\ROMLaunch.exe.manifest
+D:\Google Drive\C#\ROMLaunch\src\ROMLaunch\bin\Debug\ROMLaunch.application
+D:\Google Drive\C#\ROMLaunch\src\ROMLaunch\obj\x86\Debug\ROMLaunch.TrustInfo.xml
+D:\Google Drive\C#\ROMLaunch\src\ROMLaunch\obj\x86\Debug\ROMLaunch.exe.manifest
+D:\Google Drive\C#\ROMLaunch\src\ROMLaunch\obj\x86\Debug\ROMLaunch.application
