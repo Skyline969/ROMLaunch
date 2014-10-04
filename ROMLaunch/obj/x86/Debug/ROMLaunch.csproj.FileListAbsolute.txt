@@ -30,3 +30,16 @@ D:\Google Drive\C#\ROMLaunch\src\ROMLaunch\bin\Debug\ROMLaunch.application
 D:\Google Drive\C#\ROMLaunch\src\ROMLaunch\obj\x86\Debug\ROMLaunch.TrustInfo.xml
 D:\Google Drive\C#\ROMLaunch\src\ROMLaunch\obj\x86\Debug\ROMLaunch.exe.manifest
 D:\Google Drive\C#\ROMLaunch\src\ROMLaunch\obj\x86\Debug\ROMLaunch.application
+E:\GitHub\ROMLaunch\ROMLaunch\obj\x86\Debug\ROMLaunch.exe
+E:\GitHub\ROMLaunch\ROMLaunch\obj\x86\Debug\ROMLaunch.pdb
+E:\GitHub\ROMLaunch\ROMLaunch\bin\Debug\ROMLaunch.exe.manifest
+E:\GitHub\ROMLaunch\ROMLaunch\bin\Debug\ROMLaunch.application
+E:\GitHub\ROMLaunch\ROMLaunch\bin\Debug\ROMLaunch.exe
+E:\GitHub\ROMLaunch\ROMLaunch\bin\Debug\ROMLaunch.pdb
+E:\GitHub\ROMLaunch\ROMLaunch\obj\x86\Debug\ROMLaunch.csprojResolveAssemblyReference.cache
+E:\GitHub\ROMLaunch\ROMLaunch\obj\x86\Debug\ROMLaunch.MainForm.resources
+E:\GitHub\ROMLaunch\ROMLaunch\obj\x86\Debug\ROMLaunch.Properties.Resources.resources
+E:\GitHub\ROMLaunch\ROMLaunch\obj\x86\Debug\ROMLaunch.csproj.GenerateResource.Cache
+E:\GitHub\ROMLaunch\ROMLaunch\obj\x86\Debug\ROMLaunch.TrustInfo.xml
+E:\GitHub\ROMLaunch\ROMLaunch\obj\x86\Debug\ROMLaunch.exe.manifest
+E:\GitHub\ROMLaunch\ROMLaunch\obj\x86\Debug\ROMLaunch.application

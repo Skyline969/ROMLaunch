@@ -50,25 +50,54 @@ namespace ROMLaunch
         {
             int prevTab = tabROMSelector.SelectedIndex;
             tabROMSelector.TabPages.Clear();
+			bool emusChanged = false;
             emulators = emulators.OrderBy(emu => emu.emulatorName).ToList();
+			List<Emulator> emusToRemove = new List<Emulator>();
             foreach (Emulator emu in emulators)
             {
-                TabPage newTab = new TabPage(emu.emulatorName);
-                ListBox romList = new ListBox();
-                foreach (String ext in emu.fileExtensions)
-                {
-                    string[] roms = Directory.GetFiles(emu.romFolderPath, "*." + ext);
-                    for (int i = 0; i < roms.Length; i++)
-                    {
-                        roms[i] = Path.GetFileName(roms[i]);
-                    }
-                    romList.Items.AddRange(roms);
-                }
-                newTab.Controls.Add(romList);
-                romList.Dock = DockStyle.Fill;
+				if (Directory.Exists(emu.romFolderPath))
+				{
+					TabPage newTab = new TabPage(emu.emulatorName);
+					ListBox romList = new ListBox();
+					foreach (String ext in emu.fileExtensions)
+					{
+					
+							string[] roms = Directory.GetFiles(emu.romFolderPath, "*." + ext);
+							for (int i = 0; i < roms.Length; i++)
+							{
+								roms[i] = Path.GetFileName(roms[i]);
+							}
+							romList.Items.AddRange(roms);
+					
+					}
+					romList.MouseDoubleClick += new MouseEventHandler(executeROM);
+					newTab.Controls.Add(romList);
+					romList.Dock = DockStyle.Fill;
 
-                tabROMSelector.TabPages.Add(newTab);
+					tabROMSelector.TabPages.Add(newTab);
+				}
+				else
+				{
+					DialogResult result = MessageBox.Show("Directory does not exist:\n" + emu.romFolderPath + "\n\nRemove this emulator?", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+					if (result == DialogResult.Yes)
+					{
+						emusChanged = true;
+						emusToRemove.Add(emu);
+					}
+				}
             }
+			if (emusChanged)
+			{
+				foreach (Emulator emu in emusToRemove)
+				{
+					emulators.Remove(emu);
+				}
+				SaveSettings();
+				if (emulators.Count == 0)
+				{
+					MessageBox.Show("You don't have any emulators left!\nYou need to add one to continue.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				}
+			}
             try
             {
                 tabROMSelector.SelectTab(prevTab);
@@ -82,6 +111,18 @@ namespace ROMLaunch
                 MessageBox.Show("Unhandled error when trying to restore previous tab:\n" + ex.Message, "ROMLaunch");
             }
         }
+
+		private void executeROM(object sender, MouseEventArgs e)
+		{
+			var list = (ListBox)sender;
+			int index = list.IndexFromPoint(e.Location);
+			if (index != System.Windows.Forms.ListBox.NoMatches)
+			{
+				MessageBox.Show(index.ToString());
+				//do your stuff here
+			}
+
+		}
 
 #region Emulator Objects
 
@@ -171,6 +212,10 @@ namespace ROMLaunch
                         }
                     }
                 }
+				if (emulators.Count == 0)
+				{
+					NewEmulator();
+				}
             }
             catch (FileNotFoundException) //The settings file was missing, this happens during first launch
             {
