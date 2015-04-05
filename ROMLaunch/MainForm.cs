@@ -118,8 +118,6 @@ namespace ROMLaunch
 			int index = list.IndexFromPoint(e.Location);
 			if (index != System.Windows.Forms.ListBox.NoMatches)
 			{
-				//MessageBox.Show(tabROMSelector.SelectedTab.Text + "\n" + list.Items[index].ToString());
-				//do your stuff here
 				String selectedROM = "";
 				String selectedEmu = "";
 				String selectedEmuROMPath = "";
