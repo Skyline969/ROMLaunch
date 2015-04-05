@@ -30,7 +30,7 @@ namespace ROMLaunch
 {
     public partial class MainForm : Form
     {
-        public static String VERSION = "1.2";
+        public static String VERSION = "1.3";
 
         private List<Emulator> emulators;
 
@@ -70,7 +70,7 @@ namespace ROMLaunch
 							romList.Items.AddRange(roms);
 					
 					}
-					romList.MouseDoubleClick += new MouseEventHandler(executeROM);
+					romList.MouseDoubleClick += new MouseEventHandler(RomListDblClick);
 					newTab.Controls.Add(romList);
 					romList.Dock = DockStyle.Fill;
 
@@ -112,14 +112,60 @@ namespace ROMLaunch
             }
         }
 
-		private void executeROM(object sender, MouseEventArgs e)
+		private void RomListDblClick(object sender, MouseEventArgs e)
 		{
 			var list = (ListBox)sender;
 			int index = list.IndexFromPoint(e.Location);
 			if (index != System.Windows.Forms.ListBox.NoMatches)
 			{
-				MessageBox.Show(index.ToString());
+				//MessageBox.Show(tabROMSelector.SelectedTab.Text + "\n" + list.Items[index].ToString());
 				//do your stuff here
+				String selectedROM = "";
+				String selectedEmu = "";
+				String selectedEmuROMPath = "";
+				String selectedEmuArgs = "";
+
+				try
+				{
+					selectedROM = list.Items[index].ToString();
+				}
+				catch (NullReferenceException)
+				{
+					MessageBox.Show("Could not determine which ROM was selected", "ROMLaunch");
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Unhandled error when trying to get selected ROM:\n" + ex.Message, "ROMLaunch");
+				}
+
+				try
+				{
+					selectedEmu = emulators.Find(emu => emu.emulatorName.Equals(tabROMSelector.SelectedTab.Text)).emulatorPath;
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Unhandled error when trying to get selected emulator:\n" + ex.Message, "ROMLaunch");
+				}
+
+				try
+				{
+					selectedEmuROMPath = emulators.Find(emu => emu.emulatorName.Equals(tabROMSelector.SelectedTab.Text)).romFolderPath;
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Unhandled error when trying to get selected emulator ROM path:\n" + ex.Message, "ROMLaunch");
+				}
+
+				try
+				{
+					selectedEmuArgs = emulators.Find(emu => emu.emulatorName.Equals(tabROMSelector.SelectedTab.Text)).arguments;
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show("Unhandled error when trying to get selected emulator arguments:\n" + ex.Message, "ROMLaunch");
+				}
+
+				LaunchROM(selectedROM, selectedEmu, selectedEmuROMPath, selectedEmuArgs);
 			}
 
 		}
@@ -167,6 +213,22 @@ namespace ROMLaunch
                 SaveSettings();
             }
         }
+
+		private void LaunchROM(String selectedROM, String selectedEmu, String selectedEmuROMPath, String selectedEmuArgs)
+		{
+			try
+			{
+				if (!selectedROM.Equals("") && !selectedEmu.Equals("") && !selectedEmuROMPath.Equals(""))
+				{
+					String procArgs = selectedEmuArgs + selectedEmuROMPath + "\\" + selectedROM;
+					System.Diagnostics.Process.Start(selectedEmu, "\"" + procArgs.Trim() + "\"");
+				}
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Unhandled error when trying to launch ROM:\n" + ex.Message, "ROMLaunch");
+			}
+		}
 
 #endregion
 
@@ -430,18 +492,7 @@ namespace ROMLaunch
                 MessageBox.Show("Unhandled error when trying to get selected emulator arguments:\n" + ex.Message, "ROMLaunch");
             }
 
-            try
-            {
-                if (!selectedROM.Equals("") && !selectedEmu.Equals("") && !selectedEmuROMPath.Equals(""))
-                {
-                    String procArgs = selectedEmuArgs + selectedEmuROMPath + "\\" + selectedROM;
-                    System.Diagnostics.Process.Start(selectedEmu, "\"" + procArgs.Trim() + "\"");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Unhandled error when trying to launch ROM:\n" + ex.Message, "ROMLaunch");
-            }
+			LaunchROM(selectedROM, selectedEmu, selectedEmuROMPath, selectedEmuArgs);
         }
 
         private void btnOpenEmulator_Click(object sender, EventArgs e)
